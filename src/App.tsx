@@ -42,11 +42,17 @@ const App: React.FC = () => {
     <main className="bg-zinc-900 text-white w-screen h-screen border-2 border-zinc-800 px-20 py-10 text-center flex flex-col items-center">
       <h2 className="text-4xl font-semibold mb-8">.focus</h2>
       <TaskInput addTask={addTask} />
-      <TaskList
-        tasks={tasks}
-        deleteTask={deleteTask}
-        toggleComplete={toggleComplete}
-      />
+      {tasks.length === 0 ? (
+        <p className="text-gray-400 mt-4">
+          Add Your First Task with <span className="font-semibold">.focus</span>
+        </p>
+      ) : (
+        <TaskList
+          tasks={tasks}
+          deleteTask={deleteTask}
+          toggleComplete={toggleComplete}
+        />
+      )}
     </main>
   );
 };
