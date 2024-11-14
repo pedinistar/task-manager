@@ -1,51 +1,55 @@
-# React + TypeScript + Vite
+# Focus - Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+**Focus** is a simple task manager application built with React. It allows users to add, delete, mark tasks as completed, and persist tasks using local storage. The application is designed to help users efficiently manage their tasks in a clean and intuitive interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+1. **Task Input**: Add new tasks with a title.
+2. **Task Completion**: Mark tasks as completed or incomplete with a single click (crosses out completed tasks).
+3. **Task Deletion**: Delete tasks from the list.
+4. **Local Storage Persistence**: Retain tasks across page refreshes by saving them in the browser's local storage.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Setup and Launch
 
-- Configure the top-level `parserOptions` property like this:
+1. **Clone the Repository**:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   ```bash
+   git clone <repository-url>
+   cd focus-task-manager
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. **Install Dependencies**:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```bash
+   npm install
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# task-manager
+3. **Run the Application**:
+
+   ```bash
+   npm start
+   ```
+
+4. **Access the App**:
+   - Open your browser and go to `http://localhost:3000`.
+
+## Assumptions Made
+
+- Each task only requires a title. No additional details or descriptions are included in the task structure.
+- Tasks are stored and retrieved from `localStorage`, which allows persistence only within the same browser environment.
+- The user interface is responsive but primarily designed for desktop.
+
+## Screenshots
+
+![Project Logo](./public/screenshot.png)
+
+## Technologies Used
+
+- **React**: Framework for building the UI.
+- **TypeScript**: Ensures type safety and better code maintainability.
+- **Tailwind CSS**: Styles the UI with custom and reusable classes.
+- **Local Storage**: Stores tasks persistently across sessions.
+
+Enjoy staying organized with **Focus**!
