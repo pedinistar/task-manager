@@ -4,6 +4,8 @@
 
 **Focus** is a simple task manager application built with React. It allows users to add, delete, mark tasks as completed, and persist tasks using local storage. The application is designed to help users efficiently manage their tasks in a clean and intuitive interface.
 
+[Live Link](https://task-manager-nu-wheat.vercel.app/)
+
 ## Features
 
 1. **Task Input**: Add new tasks with a title.
